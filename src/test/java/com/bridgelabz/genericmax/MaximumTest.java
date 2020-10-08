@@ -14,19 +14,34 @@ public class MaximumTest {
 
 	@Test
 	public void whenGivenIntegers_maximumAtFirst_shouldReturnTrue() {
-		Integer result = maxValue.maximumValue(7, 4, 3);
+		Integer result = maxValue.maximumIntValue(7, 4, 3);
 		Assert.assertSame(7, result);
 	}
 
 	@Test
 	public void whenGivenIntegers_maximumAtSecond_shouldReturnTrue() {
-		Integer result = maxValue.maximumValue(4, 7, 3);
+		Integer result = maxValue.maximumIntValue(4, 7, 3);
 		Assert.assertSame(7, result);
 	}
 
 	@Test
 	public void whenGivenIntegers_maximumAtThird_shouldReturnTrue() {
-		Integer result = maxValue.maximumValue(4, 3, 7);
+		Integer result = maxValue.maximumIntValue(4, 3, 7);
 		Assert.assertSame(7, result);
+	}
+	@Test
+	public void whenGivenFloat_maximumAtFirst_shouldReturnTrue() {
+		Float result = maxValue.maximumFloatValue(7.54f, 4.20f, 7.45f);
+		Assert.assertEquals(7.54f, result,0.0f);
+	}
+	@Test
+	public void whenGivenFloat_maximumAtSecond_shouldReturnTrue() {
+		Float result = maxValue.maximumFloatValue(4.20f, 7.54f, 7.45f);
+		Assert.assertEquals(7.54f, result,0.0f);
+	}
+	@Test
+	public void whenGivenFloat_maximumAtThird_shouldReturnTrue() {
+		Float result = maxValue.maximumFloatValue(4.20f, 7.45f, 7.54f);
+		Assert.assertEquals(7.54f, result,0.0f);
 	}
 }
