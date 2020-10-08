@@ -1,30 +1,19 @@
 package com.bridgelabz.genericmax;
 
-public class MaxFinder<T extends Comparable<T>> {
-	T x, y, z;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
-	public MaxFinder(T x, T y, T z) {
-		this.x = x;
-		this.y = y;
-		this.z = z;
-	}
 
-	public T maximumValue() {
-		return this.maximumValue(x, y, z);
-	}
+public class MaxFinder<T> {
 
-	public <T extends Comparable<T>> T maximumValue(T x, T y, T z) {
-		T max = x;
-		if (y.compareTo(max) > 0)
-			max = y;
-		if (z.compareTo(max) > 0)
-			max = z;
-		printMax(x, y, z, max);
-		return max;
-	}
-
-	public <T> void printMax(T x, T y, T z, T max) {
-		System.out.println("Maximum of " + x + ", " + y + ", " + z + " is: " + max);
+	public T maximumValue(T... elements) {
+		List<T> list=new ArrayList<>();
+		for(T e:elements)
+			list.add(e);
+		Collections.sort(list, Collections.reverseOrder());
+		System.out.println("Max of element is: "+list.get(0));
+		return list.get(0);
 	}
 
 }
