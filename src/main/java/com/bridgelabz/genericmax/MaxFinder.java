@@ -3,6 +3,7 @@ package com.bridgelabz.genericmax;
 public class MaxFinder {
 	Integer x, y, z;
 	Float xF,yF,zF;
+	String xS,yS,zS;
 
 	public Integer maximumIntValue(Integer x, Integer y, Integer z) {
 		Integer max = x;
@@ -22,11 +23,23 @@ public class MaxFinder {
 		printFloatMax(xF, yF, zF, max);
 		return max;
 	}
+	public String maximumStringValue(String xS, String yS, String zS) {
+		String max = xS;
+		if (yS.compareTo(max) > 0)
+			max = yS;
+		if (zS.compareTo(max) > 0)
+			max = zS;
+		printStringMax(xS, yS, zS, max);
+		return max;
+	}
 
 	public void printIntMax(Integer x, Integer y, Integer z, Integer max) {
 		System.out.println("Maximum of " + x + ", " + y + ", " + z + " is: " + max);
 	}
-	public void printFloatMax(Float x, Float y, Float z, Float max) {
-		System.out.println("Maximum of " + x + ", " + y + ", " + z + " is: " + max);
+	public void printFloatMax(Float xF, Float yF, Float zF, Float max) {
+		System.out.println("Maximum of " + xF + ", " + yF + ", " + zF + " is: " + max);
+	}
+	public void printStringMax(String xS, String yS, String zS,String max) {
+		System.out.println("Maximum of " + xS + ", " + yS + ", " + zS + " is: " + max);
 	}
 }
