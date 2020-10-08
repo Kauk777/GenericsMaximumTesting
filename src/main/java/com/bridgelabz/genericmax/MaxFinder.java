@@ -14,6 +14,6 @@ public class MaxFinder {
 	}
 
 	public void printMax(Integer x, Integer y, Integer z, Integer max) {
-		System.out.println("Maximum of " + x + ", " + y + ", " + z + " is " + max);
+		System.out.println("Maximum of " + x + ", " + y + ", " + z + " is: " + max);
 	}
 }
