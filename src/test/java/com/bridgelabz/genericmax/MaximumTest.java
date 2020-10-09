@@ -8,8 +8,8 @@ public class MaximumTest {
 	@Test
 	public void whenGivenIntegers_maximum_shouldReturnTrue() {
 
-		Integer result = new MaxFinder<Integer>().maximumValue(7, 4, 3, 2, 41, 5);
-		Assert.assertSame(41, result);
+		Integer result = new MaxFinder<Integer>().maximumValue(41, 5, 7, 8, 15, 53);
+		Assert.assertSame(53, result);
 	}
 
 	@Test
